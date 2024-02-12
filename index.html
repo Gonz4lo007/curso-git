@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    #dashboard {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+      padding: 20px;
+    }
+
+    #sidebar {
+      width: 20%;
+      background-color: #eee;
+      padding: 10px;
+    }
+
+    #content {
+      width: 75%;
+      background-color: #fff;
+      padding: 20px;
+    }
+
+    button {
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const button = document.getElementById('toggleContent');
+      const content = document.getElementById('content');
+
+      button.addEventListener('click', function () {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Panel de Control</h1>
+  </header>
+
+  <div id="dashboard">
+    <div id="sidebar">
+      <button id="toggleContent">Mostrar/Ocultar Contenido</button>
+    </div>
+    <div id="content">
+      <h2>Bienvenido al Dashboard</h2>
+      <p>Este es un ejemplo básico de un panel de control con HTML, CSS y JavaScript.</p>
+    </div>
+  </div>
+
+</body>
+</html>
